@@ -18,7 +18,6 @@ export class ContentComponent implements OnChanges {
 
   constructor(private srvService: SrvService, private http: HttpClient) { }
   ngOnChanges() {
-    console.log("dados", this.dadosFilme) 
     this.getFilmes(this.dadosFilme)   
   }
 

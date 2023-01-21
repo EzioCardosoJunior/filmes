@@ -12,6 +12,7 @@ export class SrvService {
   constructor(private http: HttpClient) { }
 
   consultaFilmes(a: any) {
+    !a ? a = 'Hulk' : console.log(a)
     return this.http.get(this.baseUrl + "&s=" + a);
   }
 
