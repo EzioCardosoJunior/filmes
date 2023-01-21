@@ -9,7 +9,8 @@
               <h3 class="mb-0">{{ tit.Title }}</h3>
               <div class="mb-1 text-muted">Lançamento: {{ tit.Year }}</div>
               
-              <a href="https://www.imdb.com/title/{{ tit.imdbID }}" target="_blank" class="btn btn-outline-info">Pesquisa IMDb</a>
+              <button (click)="addFavoritos(tit.Title, tit.imdbID)" class="mt-2 btn btn-outline-info">Adicionar aos Favoritos</button>
+              <a href="https://www.imdb.com/title/{{ tit.imdbID }}" target="_blank" class="mt-2 btn btn-outline-info">Pesquisa IMDb</a>
             </div>
             <div class="col-auto d-none d-lg-block">
               <img src='{{ tit.Poster }}' class="bd-placeholder-img" width="200" height="250" role="img" />

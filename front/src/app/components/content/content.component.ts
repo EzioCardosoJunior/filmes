@@ -14,11 +14,11 @@ import { SrvService } from 'src/app/services/srv.service';
 export class ContentComponent implements OnChanges {
   @Input() dadosFilme: any;
   titulo: any;
-  
+
 
   constructor(private srvService: SrvService, private http: HttpClient) { }
   ngOnChanges() {
-    this.getFilmes(this.dadosFilme)   
+    this.getFilmes(this.dadosFilme)
   }
 
   getFilmes(a: any) {
@@ -26,6 +26,15 @@ export class ContentComponent implements OnChanges {
       this.titulo = resultados.Search;
       console.log(this.titulo);
     })
+  }
+
+  addFavoritos(nomeFilme: any, imdbFilme: any) {
+    alert(nomeFilme)
+    alert(imdbFilme)
+    const arr = [1, 2, 3];
+    // salvar dados
+    localStorage.setItem('itens', JSON.stringify(5));
+    localStorage.setItem(imdbFilme, nomeFilme);
   }
 
 

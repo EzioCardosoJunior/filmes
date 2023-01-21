@@ -19,6 +19,7 @@ import { ContentComponent } from './components/content/content.component';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
+    
    
   ],
   imports: [
