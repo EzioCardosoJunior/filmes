@@ -11,7 +11,7 @@
         </ul>
 
         <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input formControlName="TitleFilm"
+          <input formControlName="TitleFilm" (keyup.enter)="buscaTitulo()" 
           type="search" class=" searchTerm form-control form-control-dark text-bg-dark" placeholder="Busca Filmes..." aria-label="Search">
         </div>
 
