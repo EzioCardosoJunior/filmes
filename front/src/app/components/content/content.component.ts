@@ -28,15 +28,10 @@ export class ContentComponent implements OnChanges {
     })
   }
 
-  addFavoritos(nomeFilme: any, imdbFilme: any) {
-    alert(nomeFilme)
-    alert(imdbFilme)
-    const arr = [1, 2, 3];
-    // salvar dados
-    localStorage.setItem('itens', JSON.stringify(5));
-    localStorage.setItem(imdbFilme, nomeFilme);
-  }
-
+  addFavoritos(nomeFilme: any, imdbFilme: any, year: any, poster: any): void {
+    this.srvService.adicionaFavoritos(nomeFilme, imdbFilme, year, poster).subscribe((resp: any) => {
+    })
+  };
 
 
 

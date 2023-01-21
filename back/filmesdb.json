@@ -1,0 +1,36 @@
+{
+  "Favoritos": [
+    {
+      "id": 1,
+      "Title": "1",
+      "Year": "2010",
+      "imdbID": "",
+      "Type": "movie",
+      "Poster": ""
+    },
+    {
+      "Title": "Thor: Tales of Asgard",
+      "Year": "2011",
+      "imdbID": "tt1667903",
+      "Type": "",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTcxOTU4NzIxMV5BMl5BanBnXkFtZTcwNzE3NjAxNQ@@._V1_SX300.jpg",
+      "id": 2
+    },
+    {
+      "Title": "Valhalla - The Legend of Thor",
+      "Year": "2019",
+      "imdbID": "tt8956872",
+      "Type": "",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTA0OGZjODctYjg2ZS00YWQ1LWEyZjgtMDZkNmYyZDAwYzg0XkEyXkFqcGdeQXVyMzcwNjA5Mzg@._V1_SX300.jpg",
+      "id": 3
+    },
+    {
+      "Title": "Thor: Finding Korg",
+      "Year": "2018",
+      "imdbID": "tt8513006",
+      "Type": "",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNjI0ZmZlYzktZWNhMC00YjYwLThhZDItOGE4MTg1ZDM1YTMxXkEyXkFqcGdeQXVyNDM2MzU3Njc@._V1_SX300.jpg",
+      "id": 4
+    }
+  ]
+}
