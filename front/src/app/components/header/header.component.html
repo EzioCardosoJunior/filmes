@@ -1,4 +1,5 @@
 <header class="p-1 text-bg-dark">
+  <form [formGroup]="listaFilmesForms">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -9,15 +10,18 @@
           <li><a href="#" class="nav-link px-2 text-white">Filmes</a></li>         
         </ul>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Busca Filmes..." aria-label="Search">
-        </form>
+        <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input formControlName="TitleFilm"
+          type="search" class=" searchTerm form-control form-control-dark text-bg-dark" placeholder="Busca Filmes..." aria-label="Search">
+        </div>
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Buscar</button>
+          <button (click)="buscaTitulo()" type="button" class="btn btn-outline-light me-2">Buscar</button>
         </div>
       </div>
     </div>
+  </form>   
+  
   </header>
 
 
