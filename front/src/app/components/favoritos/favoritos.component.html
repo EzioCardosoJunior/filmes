@@ -1,1 +1,32 @@
-<p>favoritos works!</p>
+<div>
+    <main class="container">
+      <form [formGroup]="listaFilmesForms">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          
+      </div>
+      </form>
+      
+      <div class="p-4 p-md-5 mb-4 rounded">
+        <div class="row mb-2">
+          <div *ngFor="let tit of titulo" class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+  
+                <h3 class="mb-0">{{ tit.Title }}</h3>
+                <div class="mb-1 text-muted">Lançamento: {{ tit.Year }}</div>
+  
+                <button (click)="removeFavoritos(tit.id)"
+                  class="mt-2 btn btn-outline-info">Remover dos Favoritos</button>
+                <a href="https://www.imdb.com/title/{{ tit.imdbID }}" target="_blank"
+                  class="mt-2 btn btn-outline-info">Pesquisa IMDb</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img src='{{ tit.Poster }}' class="bd-placeholder-img" width="200" height="250" role="img" />
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>

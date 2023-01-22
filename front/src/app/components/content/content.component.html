@@ -1,5 +1,24 @@
 <div>
   <main class="container">
+    <form [formGroup]="listaFilmesForms">
+    <div class="p-4 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+      <div class="me-lg-auto justify-content-center">
+        <h3>{{ titBanner }}</h3>   
+      </div>
+
+      <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input formControlName="TitleFilm" (keyup.enter)="buscaTitulo()" type="search"
+          class=" searchTerm form-control form-control-dark text-bg-dark" placeholder="Busca Filmes..."
+          aria-label="Search">
+      </div>
+
+      <div class="text-end">
+        <button (click)="buscaTitulo()" type="button" class="btn btn-outline-dark me-2">Buscar</button>
+      </div>
+    </div>
+    </form>
+    
     <div class="p-4 p-md-5 mb-4 rounded">
       <div class="row mb-2">
         <div *ngFor="let tit of titulo" class="col-md-6">
@@ -8,13 +27,15 @@
 
               <h3 class="mb-0">{{ tit.Title }}</h3>
               <div class="mb-1 text-muted">Lançamento: {{ tit.Year }}</div>
-              
-              <button (click)="addFavoritos(tit.Title, tit.imdbID, tit.Year, tit.Poster)" class="mt-2 btn btn-outline-info">Adicionar aos Favoritos</button>
-              <a href="https://www.imdb.com/title/{{ tit.imdbID }}" target="_blank" class="mt-2 btn btn-outline-info">Pesquisa IMDb</a>
+
+              <button (click)="addFavoritos(tit.Title, tit.imdbID, tit.Year, tit.Poster)"
+                class="mt-2 btn btn-outline-info">Adicionar aos Favoritos</button>
+              <a href="https://www.imdb.com/title/{{ tit.imdbID }}" target="_blank"
+                class="mt-2 btn btn-outline-info">Pesquisa IMDb</a>
             </div>
             <div class="col-auto d-none d-lg-block">
               <img src='{{ tit.Poster }}' class="bd-placeholder-img" width="200" height="250" role="img" />
-              
+
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class SrvService {
 
   baseUrl = "https://www.omdbapi.com/?i=tt3896198&apikey=3ff6c92f";
-  favUrl = "http://localhost:3003/Favoritos/"
+  favUrl = "http://localhost:3003/Favoritos"
 
   favorito = {
     "Title": "",
@@ -30,16 +30,18 @@ export class SrvService {
     this.favorito.imdbID = imdb;
     this.favorito.Year = year;
     this.favorito.Poster = poster;
-
-
-   // !a ? a = 'Thor' : console.log(a)
-   console.log(this.favorito)
+    console.log(this.favorito)
     return this.http.post(this.favUrl, this.favorito);
   }
 
-  consultaFavoritos(a: any) {
-    !a ? a = 'Thor' : console.log(a)
-    return this.http.get(this.baseUrl + "&s=" + a);
+  consultaFavoritos() {
+    console.log('a')
+    return this.http.get(this.favUrl);
+  }
+  
+  deleteFavorito(id: any) {
+    console.log(id)
+    return this.http.delete(this.favUrl + '/' + id);
   }
 
  
