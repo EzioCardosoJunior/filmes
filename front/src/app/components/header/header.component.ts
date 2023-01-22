@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { SrvService } from 'src/app/services/srv.service';
 
 @Component({
@@ -11,12 +12,9 @@ import { SrvService } from 'src/app/services/srv.service';
 export class HeaderComponent implements OnInit {
   listaFilmesForms!: FormGroup;
   lista: any;
-  TitleFilm: any;
-  searchTerm = '';
-  countries: any[] = [];
-  term = '';
+  TitleFilm: any;  
 
-  constructor(private formBuilder: FormBuilder, private srvService: SrvService, private http: HttpClient) { }
+  constructor(private router: Router ,private formBuilder: FormBuilder, private srvService: SrvService, private http: HttpClient) { }
 
   ngOnInit() {
     this.listaFilmesForms = new FormGroup({
@@ -25,8 +23,11 @@ export class HeaderComponent implements OnInit {
    
     }
     buscaTitulo(){
+      console.log(this.lista)
       this.lista = this.listaFilmesForms.value.TitleFilm;
     }
+
+    
 
 
 }

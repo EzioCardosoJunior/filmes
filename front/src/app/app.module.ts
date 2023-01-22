@@ -11,6 +11,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContentComponent } from './components/content/content.component';
+import { FavoritosComponent } from './components/favoritos/favoritos.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ContentComponent } from './components/content/content.component';
     HeaderComponent,
     FooterComponent,
     ContentComponent,
+    FavoritosComponent,
     
    
   ],

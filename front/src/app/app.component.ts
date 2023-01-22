@@ -12,13 +12,7 @@ export class AppComponent implements OnInit {
  
   constructor(private srvService: SrvService, private http: HttpClient) { }
   ngOnInit() {
-        
-    /* 
-
-    this.http.get<any[]>('./assets/countries.json')
-    .subscribe((data: any[]) => {
-      this.countries = data;
-    }); */
+   
   }
 
   }
