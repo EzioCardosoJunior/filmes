@@ -14,7 +14,8 @@ export class SrvService {
     "Year": "",
     "imdbID": "",
     "Type": "",
-    "Poster": ""
+    "Poster": "",
+    "Save": "",
   };
 
 
@@ -25,22 +26,21 @@ export class SrvService {
     return this.http.get(this.baseUrl + "&s=" + a);
   }
 
-  adicionaFavoritos(title: any, imdb: any, year: any, poster: any) {
+  adicionaFavoritos(title: any, imdb: any, year: any, poster: any, type: any, save: any) {
     this.favorito.Title = title;
     this.favorito.imdbID = imdb;
     this.favorito.Year = year;
     this.favorito.Poster = poster;
-    console.log(this.favorito)
+    this.favorito.Type = type;
+    this.favorito.Save = "disabled"
     return this.http.post(this.favUrl, this.favorito);
   }
 
-  consultaFavoritos() {
-    console.log('a')
+  consultaFavoritos() {   
     return this.http.get(this.favUrl);
   }
   
   deleteFavorito(id: any) {
-    console.log(id)
     return this.http.delete(this.favUrl + '/' + id);
   }
 

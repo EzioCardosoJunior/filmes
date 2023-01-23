@@ -27,15 +27,15 @@ export class FavoritosComponent {
 
   getFilmes() {
     this.srvService.consultaFavoritos().subscribe((resultados: any) => {
-      this.titulo = resultados;
-      console.log('this.titulo', this.titulo);
+      this.titulo = resultados;      
     })
   };
 
   removeFavoritos(id: any): void {
     this.srvService.deleteFavorito(id).subscribe((resp: any) => {
-      this.router.navigate(['app-favoritos']);
+      //this.router.navigate(['app-favoritos']);
     })
+    location.reload();
   };
   
   

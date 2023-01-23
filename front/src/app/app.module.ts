@@ -12,6 +12,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContentComponent } from './components/content/content.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -21,7 +23,6 @@ import { FavoritosComponent } from './components/favoritos/favoritos.component';
     FooterComponent,
     ContentComponent,
     FavoritosComponent,
-    
    
   ],
   imports: [
@@ -31,7 +32,10 @@ import { FavoritosComponent } from './components/favoritos/favoritos.component';
     FormsModule,
     Ng2SearchPipeModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
