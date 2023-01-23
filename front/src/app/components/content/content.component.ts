@@ -40,7 +40,6 @@ export class ContentComponent implements OnInit {
 
     this.srvService.consultaFilmes(a).subscribe((resultados: any) => {
       this.titulo = resultados.Search;
-      console.log(this.tituloF)
       !this.titBanner ? this.titBanner = "Lançamentos" : this.titBanner = this.lista;
     });
   };
@@ -54,7 +53,6 @@ export class ContentComponent implements OnInit {
   };
 
   buscaTitulo() {
-    console.log(this.lista)
     this.lista = this.listaFilmesForms.value.TitleFilm;
     this.getFilmes(this.lista)
   };
