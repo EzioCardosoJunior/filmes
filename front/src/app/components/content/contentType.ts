@@ -1,4 +1,4 @@
-export class Content {
+export class ContentType {
     titulo: any;
     tituloF: any;    
     lista: any;

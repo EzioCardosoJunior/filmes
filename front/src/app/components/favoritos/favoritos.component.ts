@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SrvService } from 'src/app/services/srv.service';
+import { ContentType } from '../content/contentType';
 
 @Component({
   selector: 'app-favoritos',
@@ -10,12 +11,11 @@ import { SrvService } from 'src/app/services/srv.service';
   styleUrls: ['./favoritos.component.css']
 })
 export class FavoritosComponent {
-
-  titulo: any;
+ 
   listaFilmesForms!: FormGroup;
-  lista: any;
-  TitleFilm: any;
 
+  public content: ContentType = new ContentType()  
+ 
   constructor(private router: Router, private formBuilder: FormBuilder, private srvService: SrvService, private http: HttpClient) { }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class FavoritosComponent {
 
   getFilmes() {
     this.srvService.consultaFavoritos().subscribe((resultados: any) => {
-      this.titulo = resultados;      
+      this.content.titulo = resultados;      
     })
   };
 

@@ -4,7 +4,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SrvService } from 'src/app/services/srv.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Content } from './contentType';
+import { ContentType } from './contentType';
 
 
 
@@ -18,7 +18,7 @@ import { Content } from './contentType';
 export class ContentComponent implements OnInit {
   listaFilmesForms!: FormGroup;
 
-  public content: Content = new Content()  
+  public content: ContentType = new ContentType()  
 
   constructor(private _snackBar: MatSnackBar, private router: Router, private formBuilder: FormBuilder, private srvService: SrvService, private http: HttpClient) { }
 
