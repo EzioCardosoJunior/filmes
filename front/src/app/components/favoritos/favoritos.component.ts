@@ -33,7 +33,7 @@ export class FavoritosComponent {
 
   removeFavoritos(id: any): void {
     this.srvService.deleteFavorito(id).subscribe((resp: any) => {
-      //this.router.navigate(['app-favoritos']);
+     
     })
     location.reload();
   };
