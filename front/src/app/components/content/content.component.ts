@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SrvService } from 'src/app/services/srv.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Content } from './contentType';
 
 
 
@@ -15,14 +16,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 export class ContentComponent implements OnInit {
-  titulo: any;
-  tituloF: any;
   listaFilmesForms!: FormGroup;
-  lista: any;
-  TitleFilm: any;
-  titBanner: any;
-  favClass: any;
 
+  public content: Content = new Content()  
 
   constructor(private _snackBar: MatSnackBar, private router: Router, private formBuilder: FormBuilder, private srvService: SrvService, private http: HttpClient) { }
 
@@ -30,17 +26,17 @@ export class ContentComponent implements OnInit {
     this.listaFilmesForms = new FormGroup({
       TitleFilm: new FormControl(null)
     })
-    this.getFilmes(this.lista)
+    this.getFilmes(this.content.lista)
   };
 
   getFilmes(a: any) {
     this.srvService.consultaFavoritos().subscribe((result: any) => {
-      this.tituloF = result;     
+      this.content.tituloF = result;     
     });
 
     this.srvService.consultaFilmes(a).subscribe((resultados: any) => {
-      this.titulo = resultados.Search;
-      !this.titBanner ? this.titBanner = "Lançamentos" : this.titBanner = this.lista;
+      this.content.titulo = resultados.Search;
+      !this.content.titBanner ? this.content.titBanner = "Lançamentos" : this.content.titBanner = this.content.lista;
     });
   };
 
@@ -53,7 +49,7 @@ export class ContentComponent implements OnInit {
   };
 
   buscaTitulo() {
-    this.lista = this.listaFilmesForms.value.TitleFilm;
-    this.getFilmes(this.lista)
+    this.content.lista = this.listaFilmesForms.value.TitleFilm;
+    this.getFilmes(this.content.lista)
   };
 };

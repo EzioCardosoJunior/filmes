@@ -4,7 +4,7 @@
       <div class="p-4 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
         <div class="me-lg-auto justify-content-center">
-          <h3>{{ titBanner }}</h3>
+          <h3>{{ content.titBanner }}</h3>
         </div>
 
         <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -21,7 +21,7 @@
 
       <div class="p-4 p-md-5 mb-4 rounded">
         <div class="row mb-2">
-          <div *ngFor="let tit of titulo" class="col-md-6">
+          <div *ngFor="let tit of content.titulo" class="col-md-6">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
 
@@ -29,7 +29,7 @@
                 <div class="mb-1 text-muted">Lançamento: {{ tit.Year }}</div>
 
                 <button (click)="addFavoritos(tit.Title, tit.imdbID, tit.Year, tit.Poster, tit.Type, tit.Save)"
-                  class="mt-2 btn btn-outline-info {{ favClass }}">Favoritos
+                  class="mt-2 btn btn-outline-info">Favoritos
                   <!-- <i class="bi bi-suit-heart-fill redHeart"></i> -->
                   <i class="bi bi-suit-heart"></i>
                 </button>
