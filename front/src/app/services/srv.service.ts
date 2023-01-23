@@ -49,13 +49,3 @@ export class SrvService {
 
 
 
-
-
-
-/* s	Yes		<empty>	Movie title to search for.
-type	No	movie, series, episode	<empty>	Type of result to return.
-y	No		<empty>	Year of release.
-r	No	json, xml	json	The data type to return.
-page New!	No	1-100	1	Page number to return.
-callback	No		<empty>	JSONP callback name.
-v	No		1	API version (reserved for future use). */
